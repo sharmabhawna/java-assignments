@@ -5,14 +5,26 @@ public class DiagonalStar {
         printSquareStar(10);
     }
 
+    public static boolean isBorderIndex(int current, int edge){
+        return current == 0 || current == edge - 1;
+    }
+
+    public static boolean isBorderPosition(int row, int column, int edge){
+        return isBorderIndex(row, edge) || isBorderIndex(column, edge);
+    }
+
+    public static boolean isDiagonalPosition(int row, int column, int edge){
+        return row == column || column == edge - (row + 1);
+    }
+
     public static void printSquareStar(int number){
         for(int row = 0; row < number; row++){
             for(int column = 0; column < number; column++){
-                if(row == 0 || row == number -1 || column == 0 || column == number - 1 || row == column || column == number - (row + 1))
+                if(isBorderPosition(row, column, number) || isDiagonalPosition(row, column, number))
                     System.out.print("*");
                 else System.out.print(" ");
             }
-            System.out.println(" ");
+            System.out.print("\n");
         }
     }
 }

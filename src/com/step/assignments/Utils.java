@@ -19,19 +19,13 @@ public class Utils {
 
         int length = textArray.length;
 
-        String[] reverseTextArray = new String[length];
-
-        for(int index = 0; index < length; index++){
-            reverseTextArray[index] = textArray[length-1-index];
-        }
-
-        int index = 0;
         String delimiter = "";
-        while (index < length){
-            reverseText = reverseText + delimiter + reverseTextArray[index];
+        
+        for(int index = 0; index < length; index++){
+            reverseText = reverseText + delimiter + textArray[(length-1)-index];
             delimiter = " ";
-            index++;
         }
+
         return reverseText;
     }
 }

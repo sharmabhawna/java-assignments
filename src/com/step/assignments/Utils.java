@@ -29,6 +29,10 @@ public class Utils {
         return reverseText;
     }
 
+    public static boolean isInBetween(int number, int lowerRange, int upperRange){
+        return number <= upperRange && number >= lowerRange;
+    }
+
     public static boolean isDivisibleBy(int dividend, int divisor){
         return dividend % divisor == 0;
     }
@@ -45,5 +49,9 @@ public class Utils {
 
     public static boolean isEven(int number){
         return isDivisibleBy(number, 2);
+    }
+
+    public static boolean isOdd(int number){
+        return !(isEven(number));
     }
 }

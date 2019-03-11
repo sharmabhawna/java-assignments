@@ -34,8 +34,13 @@ class SumTest {
 
     @Test
     void shouldReturnSumOfNumbersDivisibleByThreeAndFive(){
-        assertEquals(90, Sum.sumNumbersDivisibleByThreeAndFive(3));
-        assertEquals(225, Sum.sumNumbersDivisibleByThreeAndFive(5));
+        assertEquals(15, Sum.sumNumbersDivisibleByThreeAndFive(1,15));
+        assertEquals(225, Sum.sumNumbersDivisibleByThreeAndFive(60, 90));
     }
 
+    @Test
+    void shouldReturnSumOfOddNumbers(){
+        assertEquals(9, Sum.sumOddNumbers(0,5));
+        assertEquals(40, Sum.sumOddNumbers(7, 13));
+    }
 }

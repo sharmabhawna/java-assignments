@@ -1,5 +1,7 @@
 package com.step.assignments.loops;
 
+import com.step.assignments.Utils;
+
 public class Sum {
     public static void main(String[] args) {
 
@@ -30,10 +32,23 @@ public class Sum {
         while (number > 0){
             int rem = number % 10;
             number = number / 10;
-            if(rem % 2 == 0){
+            if(Utils.isEven(rem)){
                 sum = sum + rem;
             }
         }
         return sum;
     }
+
+    public static int sumNumbersDivisibleByThreeAndFive(int lowerLimit, int upperLimit){
+        int sum = 0;
+        int candidate = lowerLimit;
+        while (Utils.isInBetween(candidate, lowerLimit, upperLimit)){
+            if(Utils.isMultipleOf(candidate, new int[]{3,5})){
+                sum = sum + candidate;
+            }
+            candidate++;
+        }
+        return sum;
+    }
+
 }

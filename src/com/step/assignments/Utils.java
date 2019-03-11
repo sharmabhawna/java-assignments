@@ -20,12 +20,30 @@ public class Utils {
         int length = textArray.length;
 
         String delimiter = "";
-        
+
         for(int index = 0; index < length; index++){
             reverseText = reverseText + delimiter + textArray[(length-1)-index];
             delimiter = " ";
         }
 
         return reverseText;
+    }
+
+    public static boolean isDivisibleBy(int dividend, int divisor){
+        return dividend % divisor == 0;
+    }
+
+    public static boolean isMultipleOf(int multiple, int[] factors){
+        boolean isMultiple = true;
+        for (int factor : factors) {
+            if(!(isDivisibleBy(multiple, factor))){
+                isMultiple = false;
+            }
+        }
+        return isMultiple;
+    }
+
+    public static boolean isEven(int number){
+        return isDivisibleBy(number, 2);
     }
 }

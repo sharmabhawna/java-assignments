@@ -1,6 +1,6 @@
-package com.step.assignments.assignment;
+package com.step.assignments.cardassigment;
 
-public abstract class DuplicateUnoCard implements Duplicable<UnoCard>{
+public abstract class DuplicateUnoCard implements Duplicable<UnoCard> {
 
     @Override
     public UnoCard duplicate() {

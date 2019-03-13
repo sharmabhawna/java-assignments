@@ -1,4 +1,4 @@
-package com.step.assignments.assignment;
+package com.step.assignments.cardassigment;
 
 public interface Duplicable<T> {
 

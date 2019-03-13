@@ -1,4 +1,4 @@
-package com.step.assignments.assignment;
+package com.step.assignments.cardassigment;
 
 public abstract class DuplicateIdentityCard implements Duplicable<IdentityCard> {
 
@@ -7,5 +7,4 @@ public abstract class DuplicateIdentityCard implements Duplicable<IdentityCard> 
         return new IdentityCard();
     }
 
-    public abstract String getCardSignature();
 }

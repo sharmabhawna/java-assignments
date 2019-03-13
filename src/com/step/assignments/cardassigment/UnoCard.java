@@ -1,6 +1,6 @@
-package com.step.assignments.assignment;
+package com.step.assignments.cardassigment;
 
-public class UnoCard extends DuplicateUnoCard{
+public class UnoCard extends DuplicateUnoCard {
 
     private String cardSignature;
 
@@ -11,4 +11,5 @@ public class UnoCard extends DuplicateUnoCard{
     public String getCardSignature() {
         return cardSignature;
     }
+
 }

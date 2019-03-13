@@ -1,13 +1,13 @@
-package com.step.assignments.assignment;
+package com.step.assignments.rangeassignment;
 
 import java.util.ArrayList;
 
-public class AlphabetRange implements Range<String>{
+public class AlphabetRange implements Range<Character> {
 
     private ArrayList alphabets;
 
     public AlphabetRange(char startAlphabet, char endAlphabet) {
-        this.alphabets = new ArrayList<String>(endAlphabet - startAlphabet);
+        this.alphabets = new ArrayList<Character>(endAlphabet - startAlphabet);
         initAlphabets(startAlphabet, endAlphabet);
     }
 
@@ -24,7 +24,7 @@ public class AlphabetRange implements Range<String>{
     }
 
     @Override
-    public boolean containsElement(String alphabet) {
+    public boolean containsElement(Character alphabet) {
         int indexOfCharacter = this.alphabets.indexOf(alphabet);
         return indexOfCharacter > 0;
     }

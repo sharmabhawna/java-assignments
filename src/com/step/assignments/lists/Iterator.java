@@ -1,4 +1,4 @@
-package com.step.assignments.Lists;
+package com.step.assignments.lists;
 
 import java.util.List;
 import java.util.NoSuchElementException;
